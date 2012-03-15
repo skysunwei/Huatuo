@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sub_apartment.name %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @sub_apartment.website %>
+</p>
+
+<p>
+  <b>Phone num:</b>
+  <%= @sub_apartment.phone_num %>
+</p>
+
+
+<%= link_to 'Edit', edit_sub_apartment_path(@sub_apartment) %> |
+<%= link_to 'Back', sub_apartments_path %>

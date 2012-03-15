@@ -1,0 +1,27 @@
+<h1>Listing sub_aprtment_images</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Sub apartment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sub_aprtment_images.each do |sub_aprtment_image| %>
+  <tr>
+    <td><%= sub_aprtment_image.name %></td>
+    <td><%= sub_aprtment_image.url %></td>
+    <td><%= sub_aprtment_image.sub_apartment %></td>
+    <td><%= link_to 'Show', sub_aprtment_image %></td>
+    <td><%= link_to 'Edit', edit_sub_aprtment_image_path(sub_aprtment_image) %></td>
+    <td><%= link_to 'Destroy', sub_aprtment_image, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sub aprtment image', new_sub_aprtment_image_path %>

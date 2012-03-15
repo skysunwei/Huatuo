@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  expired_date: 2012-03-16
+  apartment: 
+  user: 
+
+two:
+  expired_date: 2012-03-16
+  apartment: 
+  user: 

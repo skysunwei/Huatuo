@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @assignment.user.username %>
+</p>
+
+<p>
+  <b>Expired date:</b>
+  <%= @assignment.expired_date %>
+</p>
+
+<p>
+  <b>Apartment:</b>
+  <%= @assignment.apartment.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

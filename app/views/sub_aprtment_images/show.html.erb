@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sub_aprtment_image.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @sub_aprtment_image.url %>
+</p>
+
+<p>
+  <b>Sub apartment:</b>
+  <%= @sub_aprtment_image.sub_apartment %>
+</p>
+
+
+<%= link_to 'Edit', edit_sub_aprtment_image_path(@sub_aprtment_image) %> |
+<%= link_to 'Back', sub_aprtment_images_path %>

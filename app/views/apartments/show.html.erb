@@ -1,0 +1,76 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <b>Name:</b>
+    <%= @apartment.name %>
+</p>
+
+<p>
+    <b>Website:</b>
+    <%= @apartment.website %>
+</p>
+
+<p>
+    <b>Phone num:</b>
+    <%= @apartment.phone_num %>
+</p>
+
+<%= link_to 'Edit', edit_apartment_path(@apartment) %> |
+<%= link_to 'Back', apartments_path %>
+
+<hr>
+
+<h2>Sub Apartments</h2>
+<% @apartment.sub_apartments.each do |sub_apartment| %>
+  <p>
+    <b>Name:</b>
+    <%= sub_apartment.name %>
+  </p>
+
+  <p>
+    <b>Website:</b>
+    <%= sub_apartment.website %>
+  </p>
+
+  <p>
+    <b>Phone Number:</b>
+    <%= sub_apartment.phone_num %>
+  </p>
+
+  <p>
+    <b>Area:</b>
+    <%= sub_apartment.area.name %>
+  </p>
+
+  <%= link_to 'Edit', edit_sub_apartment_path(sub_apartment) %> |
+  <%= link_to 'Destroy', sub_apartment, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<hr>
+
+<h2>Add a Sub Apartment</h2>
+<%= form_for([@apartment, @apartment.sub_apartments.build]) do |f| %>
+
+  <%= f.select :area_id, @area_lists %>
+
+  <p class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </p>
+
+  <p class="field">
+    <%= f.label :phone_num %>
+    <%= f.text_field :phone_num %>
+  </p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

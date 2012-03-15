@@ -1,0 +1,27 @@
+<h1>Listing sub_apartments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Phone num</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sub_apartments.each do |sub_apartment| %>
+  <tr>
+    <td><%= sub_apartment.name %></td>
+    <td><%= sub_apartment.website %></td>
+    <td><%= sub_apartment.phone_num %></td>
+    <td><%= link_to 'Show', sub_apartment %></td>
+    <td><%= link_to 'Edit', edit_sub_apartment_path(sub_apartment) %></td>
+    <td><%= link_to 'Destroy', sub_apartment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sub apartment', new_sub_apartment_path %>
