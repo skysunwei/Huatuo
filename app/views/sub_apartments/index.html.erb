@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Website</th>
+    <th>Address</th>
     <th>Phone num</th>
     <th></th>
     <th></th>
@@ -13,7 +13,7 @@
 <% @sub_apartments.each do |sub_apartment| %>
   <tr>
     <td><%= sub_apartment.name %></td>
-    <td><%= sub_apartment.website %></td>
+    <td><%= sub_apartment.address %></td>
     <td><%= sub_apartment.phone_num %></td>
     <td><%= link_to 'Show', sub_apartment %></td>
     <td><%= link_to 'Edit', edit_sub_apartment_path(sub_apartment) %></td>

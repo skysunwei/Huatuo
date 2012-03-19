@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20120315164905) do
 
   create_table "sub_apartments", :force => true do |t|
     t.string   "name"
-    t.string   "website"
+    t.string   "address"
     t.integer  "phone_num"
     t.integer  "apartment_id"
     t.integer  "area_id"
