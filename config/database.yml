@@ -5,11 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  username: skysunwei@gmail.com
-  password: Tw@20020707
-  port: 5432
-  host: localhost
-  database: huatuo
+  url: SHARED_DATABASE
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
